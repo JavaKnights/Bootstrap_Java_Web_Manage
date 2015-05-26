@@ -37,7 +37,7 @@
 		</filter>
 	</appender>
 
-	<logger name="com.fengdi"><level value="DEBUG" /></logger>
+	<logger name="com.xiuxinger.origin"><level value="DEBUG" /></logger>
 
 	<logger name="org.apache"><level value="INFO" /></logger>
 

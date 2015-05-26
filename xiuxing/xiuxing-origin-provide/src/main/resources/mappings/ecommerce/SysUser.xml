@@ -17,15 +17,9 @@
 				DEL_FLAG
 				) 
 			 VALUES(
-				<if test="id != null">
 				#{id} , 
-				</if>
-				<if test="sysUserName != null">
 				#{sysUserName} , 
-				</if> 
-				<if test="sysPassword != null">
 				#{sysPassword} , 
-				</if> 
 				#{DEL_FLAG_NORMAL}  
 				)
 	</insert>
@@ -73,7 +67,6 @@
 			AND t.SYS_PASSWORD=#{sysPassword}   
 			</if>
 			AND t.DEL_FLAG = #{DEL_FLAG_NORMAL}
-			ORDER BY REGISTER_TIME DESC
 	</select>
 
 	<select id="findAllList" resultType="SysUser">
