@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+        http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://code.alibabatech.com/schema/dubbo  
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd  
+        ">
+
+	<!-- Application name -->
+	<dubbo:application name="${dubbo.app.name}" />
+
+	<!-- registry注册方式 -->
+	<dubbo:registry address="${dubbo.registry.address}" />
+
+	<!-- 协议端口 -->
+	<dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" />
+
+	<!-- Service -->
+
+	<dubbo:service interface="com.fengdi.fds.ecommerce.rpc.IProductRpcService" ref="productRpcService" executes="10" />
+	<dubbo:service interface="com.fengdi.fds.ecommerce.rpc.ISysUserRpcService" ref="sysUserRpcService" executes="10" />
+	<dubbo:service interface="com.fengdi.fds.ecommerce.rpc.IMemberRpcService" ref="memberRpcService" executes="10" />
+	<dubbo:service interface="com.fengdi.fds.ecommerce.rpc.IOrderRpcService" ref="orderRpcService" executes="10" />
+	<dubbo:service interface="com.fengdi.fds.ecommerce.rpc.IDeliveryManRpcService" ref="deliveryManRpcService" executes="10" />
+	
+
+
+</beans> 

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiuxinger.origin.dao.SysUserDao">
+    
+	<sql id="tableColumns">
+		ID AS id, 
+		SYS_USER_NAME AS sysUserName,  
+		SYS_PASSWORD AS sysPassword, 
+		DEL_FLAG AS delFlag
+	</sql>
+	
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO T_SYS_USER( 
+				ID, 
+				SYS_USER_NAME, 
+				SYS_PASSWORD, 
+				DEL_FLAG
+				) 
+			 VALUES(
+				<if test="id != null">
+				#{id} , 
+				</if>
+				<if test="sysUserName != null">
+				#{sysUserName} , 
+				</if> 
+				<if test="sysPassword != null">
+				#{sysPassword} , 
+				</if> 
+				#{DEL_FLAG_NORMAL}  
+				)
+	</insert>
+
+	<update id="update">
+		UPDATE T_SYS_USER t SET 
+				<if test="id != null">
+				t.ID=#{id},  
+				</if> 
+				<if test="sysUserName != null">
+				t.SYS_USER_NAME=#{sysUserName},  
+				</if> 
+				<if test="sysPassword != null">
+				t.SYS_PASSWORD=#{sysPassword},  
+				</if> 
+				t.DEL_FLAG = #{DEL_FLAG_NORMAL}
+		WHERE t.ID=#{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE T_SYS_USER t SET 
+			DEL_FLAG = #{DEL_FLAG_DELETE}
+		WHERE t.ID=#{id}
+	</update>
+
+	<delete id="remove" >
+		DELETE FROM T_SYS_USER WHERE ID=#{id}
+	</delete>
+
+	<select id="get" resultType="SysUser">
+		SELECT 
+		<include refid="tableColumns"/>
+		FROM T_SYS_USER t WHERE t.ID=#{id}
+	</select>
+	
+	<select id="findList" resultType="SysUser">
+		SELECT 
+		<include refid="tableColumns"/>
+		FROM T_SYS_USER t 
+		WHERE 	1=1
+			<if test="sysUserName != null">
+			AND t.SYS_USER_NAME=#{sysUserName}   
+			</if>
+			<if test="sysPassword != null">
+			AND t.SYS_PASSWORD=#{sysPassword}   
+			</if>
+			AND t.DEL_FLAG = #{DEL_FLAG_NORMAL}
+			ORDER BY REGISTER_TIME DESC
+	</select>
+
+	<select id="findAllList" resultType="SysUser">
+		SELECT 
+		<include refid="tableColumns"/>		
+		FROM T_SYS_USER t
+		WHERE 
+		t.DEL_FLAG = #{DEL_FLAG_NORMAL}
+	</select>
+	
+	<select id="getByTerms" resultType="SysUser">
+		SELECT 
+		<include refid="tableColumns"/>
+		FROM T_SYS_USER t 
+		WHERE 	1=1
+			<if test="sysUserName != null">
+			AND t.SYS_USER_NAME=#{sysUserName}   
+			</if>
+			<if test="sysPassword != null">
+			AND t.SYS_PASSWORD=#{sysPassword}   
+			</if>
+			AND t.DEL_FLAG = #{DEL_FLAG_NORMAL}
+	</select>
+	
+	<select id="login" resultType="SysUser">
+		SELECT 
+		<include refid="tableColumns"/>
+		FROM T_SYS_USER t 
+		WHERE 	1=1
+			AND t.SYS_USER_NAME=#{sysUserName}   	
+			AND t.SYS_PASSWORD=#{sysPassword}   
+			AND t.DEL_FLAG = #{DEL_FLAG_NORMAL}
+	</select>
+	
+	<select id="loginSalt" resultType="SysUser">
+		SELECT 
+		<include refid="tableColumns"/>
+		FROM T_SYS_USER t 
+		WHERE 	1=1
+			AND t.SYS_USER_NAME=#{sysUserName}   	  
+			AND t.DEL_FLAG = #{DEL_FLAG_NORMAL}
+	</select>
+
+	<update id="updateSysUserPassword">
+		UPDATE T_SYS_USER t SET 
+			t.SYS_PASSWORD=#{sysPassword}
+		WHERE t.ID=#{id}
+	</update>
+	
+</mapper>
