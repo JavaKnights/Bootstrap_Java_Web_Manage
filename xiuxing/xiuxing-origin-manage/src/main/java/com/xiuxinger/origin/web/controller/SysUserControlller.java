@@ -33,7 +33,7 @@ public class SysUserControlller {
     
     private static Logger log = LoggerFactory.getLogger(SysUserControlller.class);
     
-    @Autowired
+    //@Autowired
     private ISysUserRpcService sysUserRpcService;
     
     /***

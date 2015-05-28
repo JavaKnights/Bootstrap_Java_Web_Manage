@@ -14,8 +14,8 @@
 	<dubbo:registry address="${dubbo.registry.address}" />
 	<dubbo:consumer timeout="5000"/>
 	
-	
+	<!-- 
 	<dubbo:reference id="sysUserRpcService" interface="com.xiuxinger.origin.rpc.ISysUserRpcService" />
-	
+	 -->
 	
 </beans> 

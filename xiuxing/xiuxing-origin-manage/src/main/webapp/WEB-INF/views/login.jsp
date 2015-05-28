@@ -1,79 +1,87 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>好货到家运营管理系统</title>
-<link rel="icon" href="${pageContext.request.contextPath}/images/favicon.png" type="image/x-icon" />
-<link rel="shortcut icon" href="${pageContext.request.contextPath}/images/favicon.png" type="image/x-icon" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
-<link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-body {
-	font-size: 12px;
-	color: #666;
-}
+<%@ include file="/WEB-INF/views/commons/taglibs.jsp"%>
+<!DOCTYPE html>
+<html lang="zh-CN" class="body-full-height">
+  <head>
+  	<!-- META SECTION -->
+    <title>Joli Admin - Responsive Bootstrap Admin Template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- END META SECTION -->
+	<%@ include file="/WEB-INF/views/commons/commonsjs.jsp"%>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+    	
+    	
+    </script>
+  </head>
 
-.login {
-	left: 50%;
-	top: 50%;
-	position: absolute;
-}
+  <body>
 
-.login .main {
-	width: 550px;
-	height: 425px;
-	margin: -230px 0 0 -275px;
-	background: url(${pageContext.request.contextPath}/images/login_bg.gif) no-repeat bottom left;
-	position: relative;
-}
-
-.login .main ul {
-	width: 450px;
-	padding: 170px 0 0 100px;
-	height: 200px;
-	background: url(${pageContext.request.contextPath}/images/login_head.gif) no-repeat;
-}
-
-.login .main li {
-	padding-bottom: 8px;
-}
-
-.login .inp_btn {
-	width: 76px;
-	height: 32px;
-	background: url(${pageContext.request.contextPath}/images/login_btn.gif) no-repeat;
-	padding: 0;
-}
-</style>
-</head>
-<body>
-	<form name="adminform" style="margin: 0;" action="doLogin.do" method="post">
-		<div class="login">
-			<div class="main">
-				<ul class="col-ul ul_li_sp">
-					<li><span>用户名:</span>
-					<input tabindex="0" type="text" class="inp_txt w-140" name="name" value="" /><label style="color: red"> <c:out value="${message_login}" /></label></li>
-					<li><span>密 码: </span>
-					<input tabindex="0" type="password" class="inp_txt w-140" name="password" value="" /></li>
-					<!-- 
-					<li><span>验证码: </span>
-					<img src="" alt="" />
-					<input tabindex="0" type="text" class="inp_txt w-140" name="" value="" /></li> -->
-					<li><input name="submit" type="submit" class="inp_btn" tabindex="1" value="登录" /></li>
-				</ul>
-				<p class="col-p a-c">
-					<a href="http://www.fuzhifu.com.cn/" target="_blank">好货到家V1.8 2014</a>, All rights reserved
-				</p>
-			</div>
-		</div>
-	</form>
-	<script type="text/javascript">
-		if (window != top)
-			top.location.href = location.href;
-
-		$("input[name='username']").focus();
-	</script>
-</body>
+    <div class="login-container lightmode">
+        
+            <div class="login-box animated fadeInDown">
+                <div class="login-logo"></div>
+                <div class="login-body">
+                    <div class="login-title"><strong>登录</strong>后台管理系统</div>
+                    <form action="index.html" class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder="用户名"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" class="form-control" placeholder="密码"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <a href="#" class="btn btn-link btn-block">忘记密码?</a>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-info btn-block">登录</button>
+                        </div>
+                    </div>
+                    <!-- 
+                    <div class="login-or">OR</div>
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-block btn-twitter"><span class="fa fa-twitter"></span> Twitter</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-block btn-facebook"><span class="fa fa-facebook"></span> Facebook</button>
+                        </div>
+                        <div class="col-md-4">                            
+                            <button class="btn btn-info btn-block btn-google"><span class="fa fa-google-plus"></span> Google</button>
+                        </div>
+                    </div>
+                     -->
+                    <div class="login-subtitle">
+                       	你还没有账户 ? <a href="#">注册一个</a>
+                    </div>
+                    </form>
+                </div>
+                <div class="login-footer">
+                    <div class="pull-left">
+                        &copy; 2015 枫帝科技
+                    </div>
+                    <div class="pull-right">
+                        <a href="#">关于</a> |
+                        <a href="#">声明</a> |
+                        <a href="#">联系我们</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+  </body>
 </html>
+
