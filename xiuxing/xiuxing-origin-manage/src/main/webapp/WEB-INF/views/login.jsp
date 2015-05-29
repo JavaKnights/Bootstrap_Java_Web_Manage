@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ include file="/WEB-INF/views/commons/taglibs.jsp"%>
-<!DOCTYPE html>
-<html lang="zh-CN" class="body-full-height">
+<!DOCTYPE html><html lang="zh-CN" class="body-full-height">
   <head>
   	<!-- META SECTION -->
     <title>Joli Admin - Responsive Bootstrap Admin Template</title>
@@ -33,7 +32,7 @@
                 <div class="login-logo"></div>
                 <div class="login-body">
                     <div class="login-title"><strong>登录</strong>后台管理系统</div>
-                    <form action="index.html" class="form-horizontal" method="post">
+                    <form action="doLogin.do" class="form-horizontal" method="post">
                     <div class="form-group">
                         <div class="col-md-12">
                             <input type="text" class="form-control" placeholder="用户名"/>
