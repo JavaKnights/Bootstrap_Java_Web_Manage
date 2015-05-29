@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ include file="/WEB-INF/views/commons/taglibs.jsp"%>
-<!DOCTYPE html>
-<html lang="zh-CN" class="body-full-height">
+<!DOCTYPE html><html lang="zh-CN" class="body-full-height">
   <head>
   	<!-- META SECTION -->
     <title>Joli Admin - Responsive Bootstrap Admin Template</title>
