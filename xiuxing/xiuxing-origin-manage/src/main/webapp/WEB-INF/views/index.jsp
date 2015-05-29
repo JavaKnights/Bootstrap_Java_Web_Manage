@@ -1,425 +1,561 @@
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ include file="/WEB-INF/views/commons/taglibs.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-<link href="css/admin.css" type="text/css" rel="stylesheet" media="all" />
-<title>好货到家管理平台</title>
-<link rel="icon" href="${pageContext.request.contextPath}/images/favicon.png" type="image/x-icon" />
-<link rel="shortcut icon" href="${pageContext.request.contextPath}/images/favicon.png" type="image/x-icon" />
-<%@ include file="/WEB-INF/views/commons/commonsjs.jsp"%>
-<style type="text/css">
-body {
-	padding-left: 160px;
-	background: #f8f8f9 url(images/left_bg.gif) repeat-y left;
-}
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>        
+        <!-- META SECTION -->
+        <title>Joli Admin - Responsive Bootstrap Admin Template</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- END META SECTION -->
 
-html, body {
-	height: 100%;
-	position: relative;
-}
-</style>
+        <%@ include file="/WEB-INF/views/commons/commonsjs.jsp"%> 
+                                      
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container">
+            
+            <!-- 左侧栏 -->
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation">
+                	<!-- 左上角标题 -->
+                    <li class="xn-logo">
+                        <a href="index.html">Joli Admin</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <!--  -->
+                    
+                    <!-- 用户头像信息等 -->
+                    <li class="xn-profile">
+                        <a href="#" class="profile-mini">
+                            <img src="${ctx}/joli-admin/assets/images/users/avatar.jpg" alt="John Doe"/>
+                        </a>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="${ctx}/joli-admin/assets/images/users/avatar.jpg" alt="John Doe"/>
+                            </div>
+                            <div class="profile-data">
+                                <div class="profile-data-name">John Doe</div>
+                                <div class="profile-data-title">Web Developer/Designer</div>
+                            </div>
+                            <div class="profile-controls">
+                                <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span></a>
+                                <a href="pages-messages.html" class="profile-control-right"><span class="fa fa-envelope"></span></a>
+                            </div>
+                        </div>                                                                        
+                    </li>
+                    <!--  -->
+                    
+                    <!-- 左侧菜单 -->
+                    <li class="xn-title">Navigation</li>
+                    <li class="active">
+                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+                    </li>                    
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Pages</span></a>
+                        <ul>
+                            <li><a href="pages-gallery.html"><span class="fa fa-image"></span> Gallery</a></li>
+                            <li><a href="pages-profile.html"><span class="fa fa-user"></span> Profile</a></li>
+                            <li><a href="pages-address-book.html"><span class="fa fa-users"></span> Address Book</a></li>
+                            <li class="xn-openable">
+                                <a href="#"><span class="fa fa-clock-o"></span> Timeline</a>
+                                <ul>
+                                    <li><a href="pages-timeline.html"><span class="fa fa-align-center"></span> Default</a></li>
+                                    <li><a href="pages-timeline-simple.html"><span class="fa fa-align-justify"></span> Full Width</a></li>
+                                </ul>
+                            </li>
+                            <li class="xn-openable">
+                                <a href="#"><span class="fa fa-envelope"></span> Mailbox</a>
+                                <ul>
+                                    <li><a href="pages-mailbox-inbox.html"><span class="fa fa-inbox"></span> Inbox</a></li>
+                                    <li><a href="pages-mailbox-message.html"><span class="fa fa-file-text"></span> Message</a></li>
+                                    <li><a href="pages-mailbox-compose.html"><span class="fa fa-pencil"></span> Compose</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pages-messages.html"><span class="fa fa-comments"></span> Messages</a></li>
+                            <li><a href="pages-calendar.html"><span class="fa fa-calendar"></span> Calendar</a></li>
+                            <li><a href="pages-tasks.html"><span class="fa fa-edit"></span> Tasks</a></li>
+                            <li><a href="pages-content-table.html"><span class="fa fa-columns"></span> Content Table</a></li>
+                            <li><a href="pages-faq.html"><span class="fa fa-question-circle"></span> FAQ</a></li>
+                            <li><a href="pages-search.html"><span class="fa fa-search"></span> Search</a></li>
+                            <li class="xn-openable">
+                                <a href="#"><span class="fa fa-file"></span> Blog</a>
+                                
+                                <ul>                                    
+                                    <li><a href="pages-blog-list.html"><span class="fa fa-copy"></span> List of Posts</a></li>
+                                    <li><a href="pages-blog-post.html"><span class="fa fa-file-o"></span>Single Post</a></li>
+                                </ul>
+                            </li>
+                            <li class="xn-openable">
+                                <a href="#"><span class="fa fa-sign-in"></span> Login</a>
+                                <ul>                                    
+                                    <li><a href="pages-login.html">App Login</a></li>
+                                    <li><a href="pages-login-website.html">Website Login</a></li>
+                                    <li><a href="pages-login-website-light.html"> Website Login Light</a></li>
+                                </ul>
+                            </li>
+                            <li class="xn-openable">
+                                <a href="#"><span class="fa fa-warning"></span> Error Pages</a>
+                                <ul>                                    
+                                    <li><a href="pages-error-404.html">Error 404 Sample 1</a></li>
+                                    <li><a href="pages-error-404-2.html">Error 404 Sample 2</a></li>
+                                    <li><a href="pages-error-500.html"> Error 500</a></li>
+                                </ul>
+                            </li>                            
+                        </ul>
+                    </li>
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-file-text-o"></span> <span class="xn-text">Layouts</span></a>
+                        <ul>
+                            <li><a href="layout-boxed.html">Boxed</a></li>
+                            <li><a href="layout-nav-toggled.html">Navigation Toggled</a></li>
+                            <li><a href="layout-nav-top.html">Navigation Top</a></li>
+                            <li><a href="layout-nav-right.html">Navigation Right</a></li>
+                            <li><a href="layout-nav-top-fixed.html">Top Navigation Fixed</a></li>                            
+                            <li><a href="layout-nav-custom.html">Custom Navigation</a></li>
+                            <li><a href="layout-frame-left.html">Frame Left Column</a></li>
+                            <li><a href="layout-frame-right.html">Frame Right Column</a></li>
+                            <li><a href="layout-search-left.html">Search Left Side</a></li>
+                            <li><a href="blank.html">Blank Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="xn-title">Components</li>
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-cogs"></span> <span class="xn-text">UI Kits</span></a>                        
+                        <ul>
+                            <li><a href="ui-widgets.html"><span class="fa fa-heart"></span> Widgets</a></li>                            
+                            <li><a href="ui-elements.html"><span class="fa fa-cogs"></span> Elements</a></li>
+                            <li><a href="ui-buttons.html"><span class="fa fa-square-o"></span> Buttons</a></li>                            
+                            <li><a href="ui-panels.html"><span class="fa fa-pencil-square-o"></span> Panels</a></li>
+                            <li><a href="ui-icons.html"><span class="fa fa-magic"></span> Icons</a><div class="informer informer-warning">+679</div></li>
+                            <li><a href="ui-typography.html"><span class="fa fa-pencil"></span> Typography</a></li>
+                            <li><a href="ui-portlet.html"><span class="fa fa-th"></span> Portlet</a></li>
+                            <li><a href="ui-sliders.html"><span class="fa fa-arrows-h"></span> Sliders</a></li>
+                            <li><a href="ui-alerts-popups.html"><span class="fa fa-warning"></span> Alerts & Popups</a></li>                            
+                            <li><a href="ui-lists.html"><span class="fa fa-list-ul"></span> Lists</a></li>
+                            <li><a href="ui-tour.html"><span class="fa fa-random"></span> Tour</a></li>
+                        </ul>
+                    </li>                    
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-pencil"></span> <span class="xn-text">Forms</span></a>
+                        <ul>
+                            <li>
+                                <a href="form-layouts-two-column.html"><span class="fa fa-tasks"></span> Form Layouts</a>
+                                <div class="informer informer-danger">New</div>
+                                <ul>
+                                    <li><a href="form-layouts-one-column.html"><span class="fa fa-align-justify"></span> One Column</a></li>
+                                    <li><a href="form-layouts-two-column.html"><span class="fa fa-th-large"></span> Two Column</a></li>
+                                    <li><a href="form-layouts-tabbed.html"><span class="fa fa-table"></span> Tabbed</a></li>
+                                    <li><a href="form-layouts-separated.html"><span class="fa fa-th-list"></span> Separated Rows</a></li>
+                                </ul> 
+                            </li>
+                            <li><a href="form-elements.html"><span class="fa fa-file-text-o"></span> Elements</a></li>
+                            <li><a href="form-validation.html"><span class="fa fa-list-alt"></span> Validation</a></li>
+                            <li><a href="form-wizards.html"><span class="fa fa-arrow-right"></span> Wizards</a></li>
+                            <li><a href="form-editors.html"><span class="fa fa-text-width"></span> WYSIWYG Editors</a></li>
+                            <li><a href="form-file-handling.html"><span class="fa fa-floppy-o"></span> File Handling</a></li>
+                        </ul>
+                    </li>
+                    <li class="xn-openable">
+                        <a href="tables.html"><span class="fa fa-table"></span> <span class="xn-text">Tables</span></a>
+                        <ul>                            
+                            <li><a href="table-basic.html"><span class="fa fa-align-justify"></span> Basic</a></li>
+                            <li><a href="table-datatables.html"><span class="fa fa-sort-alpha-desc"></span> Data Tables</a></li>
+                            <li><a href="table-export.html"><span class="fa fa-download"></span> Export Tables</a></li>                            
+                        </ul>
+                    </li>
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-bar-chart-o"></span> <span class="xn-text">Charts</span></a>
+                        <ul>
+                            <li><a href="charts-morris.html"><span class="xn-text">Morris</span></a></li>
+                            <li><a href="charts-nvd3.html"><span class="xn-text">NVD3</span></a></li>
+                            <li><a href="charts-rickshaw.html"><span class="xn-text">Rickshaw</span></a></li>
+                            <li><a href="charts-other.html"><span class="xn-text">Other</span></a></li>
+                        </ul>
+                    </li>                    
+                    <li>
+                        <a href="maps.html"><span class="fa fa-map-marker"></span> <span class="xn-text">Maps</span></a>
+                    </li>                    
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-sitemap"></span> <span class="xn-text">Navigation Levels</span></a>
+                        <ul>                            
+                            <li class="xn-openable">
+                                <a href="#">Second Level</a>
+                                <ul>
+                                    <li class="xn-openable">
+                                        <a href="#">Third Level</a>
+                                        <ul>
+                                            <li class="xn-openable">
+                                                <a href="#">Fourth Level</a>
+                                                <ul>
+                                                    <li><a href="#">Fifth Level</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- 中间部分的页面 -->
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- 顶部页面 -->
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                    <!-- SEARCH -->
+                    <li class="xn-search">
+                        <form role="form">
+                            <input type="text" name="search" placeholder="Search..."/>
+                        </form>
+                    </li>   
+                    <!-- END SEARCH -->
+                    <!-- SIGN OUT -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>                        
+                    </li> 
+                    <!-- END SIGN OUT -->
+                    <!-- MESSAGES -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-comments"></span></a>
+                        <div class="informer informer-danger">4</div>
+                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="fa fa-comments"></span> Messages</h3>                                
+                                <div class="pull-right">
+                                    <span class="label label-danger">4 new</span>
+                                </div>
+                            </div>
+                            <div class="panel-body list-group list-group-contacts scroll" style="height: 200px;">
+                                <a href="#" class="list-group-item">
+                                    <div class="list-group-status status-online"></div>
+                                    <img src="assets/images/users/user2.jpg" class="pull-left" alt="John Doe"/>
+                                    <span class="contacts-title">John Doe</span>
+                                    <p>Praesent placerat tellus id augue condimentum</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="list-group-status status-away"></div>
+                                    <img src="assets/images/users/user.jpg" class="pull-left" alt="Dmitry Ivaniuk"/>
+                                    <span class="contacts-title">Dmitry Ivaniuk</span>
+                                    <p>Donec risus sapien, sagittis et magna quis</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="list-group-status status-away"></div>
+                                    <img src="assets/images/users/user3.jpg" class="pull-left" alt="Nadia Ali"/>
+                                    <span class="contacts-title">Nadia Ali</span>
+                                    <p>Mauris vel eros ut nunc rhoncus cursus sed</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="list-group-status status-offline"></div>
+                                    <img src="assets/images/users/user6.jpg" class="pull-left" alt="Darth Vader"/>
+                                    <span class="contacts-title">Darth Vader</span>
+                                    <p>I want my money back!</p>
+                                </a>
+                            </div>     
+                            <div class="panel-footer text-center">
+                                <a href="pages-messages.html">Show all messages</a>
+                            </div>                            
+                        </div>                        
+                    </li>
+                    <!-- END MESSAGES -->
+                    <!-- TASKS -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-tasks"></span></a>
+                        <div class="informer informer-warning">3</div>
+                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="fa fa-tasks"></span> Tasks</h3>                                
+                                <div class="pull-right">
+                                    <span class="label label-warning">3 active</span>
+                                </div>
+                            </div>
+                            <div class="panel-body list-group scroll" style="height: 200px;">                                
+                                <a class="list-group-item" href="#">
+                                    <strong>Phasellus augue arcu, elementum</strong>
+                                    <div class="progress progress-small progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
+                                    </div>
+                                    <small class="text-muted">John Doe, 25 Sep 2014 / 50%</small>
+                                </a>
+                                <a class="list-group-item" href="#">
+                                    <strong>Aenean ac cursus</strong>
+                                    <div class="progress progress-small progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">80%</div>
+                                    </div>
+                                    <small class="text-muted">Dmitry Ivaniuk, 24 Sep 2014 / 80%</small>
+                                </a>
+                                <a class="list-group-item" href="#">
+                                    <strong>Lorem ipsum dolor</strong>
+                                    <div class="progress progress-small progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">95%</div>
+                                    </div>
+                                    <small class="text-muted">John Doe, 23 Sep 2014 / 95%</small>
+                                </a>
+                                <a class="list-group-item" href="#">
+                                    <strong>Cras suscipit ac quam at tincidunt.</strong>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
+                                    </div>
+                                    <small class="text-muted">John Doe, 21 Sep 2014 /</small><small class="text-success"> Done</small>
+                                </a>                                
+                            </div>     
+                            <div class="panel-footer text-center">
+                                <a href="pages-tasks.html">Show all tasks</a>
+                            </div>                            
+                        </div>                        
+                    </li>
+                    <!-- END TASKS -->
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
 
-<script type="text/javascript">
-	//$.dialog.setConfig('base', 'http://www.fuzhifu.com.cn');
-	var isSetSearchWordColor = 0;
-	function setSearchWordColor(keywords) {
-		if (isSetSearchWordColor) {
-			return;
-		}
+				<!-- 链接栏页面 -->
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>                    
+                    <li class="active">Dashboard</li>
+                </ul>
+                <!-- END BREADCRUMB -->                       
+                
+                <!-- 中部页面部分 -->
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                    
+                    <!-- START WIDGETS -->                    
+                    <div class="row">
+                        <div class="col-md-3">
+                            
+                            <!-- START WIDGET SLIDER -->
+                            <div class="widget widget-default widget-carousel">
+                                <div class="owl-carousel" id="owl-example">
+                                    <div>                                    
+                                        <div class="widget-title">Total Visitors</div>                                                                        
+                                        <div class="widget-subtitle">27/08/2014 15:23</div>
+                                        <div class="widget-int">3,548</div>
+                                    </div>
+                                    <div>                                    
+                                        <div class="widget-title">Returned</div>
+                                        <div class="widget-subtitle">Visitors</div>
+                                        <div class="widget-int">1,695</div>
+                                    </div>
+                                    <div>                                    
+                                        <div class="widget-title">New</div>
+                                        <div class="widget-subtitle">Visitors</div>
+                                        <div class="widget-int">1,977</div>
+                                    </div>
+                                </div>                            
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                             
+                            </div>         
+                            <!-- END WIDGET SLIDER -->
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                            <!-- START WIDGET MESSAGES -->
+                            <div class="widget widget-default widget-item-icon" onclick="location.href='pages-messages.html';">
+                                <div class="widget-item-left">
+                                    <span class="fa fa-envelope"></span>
+                                </div>                             
+                                <div class="widget-data">
+                                    <div class="widget-int num-count">48</div>
+                                    <div class="widget-title">New messages</div>
+                                    <div class="widget-subtitle">In your mailbox</div>
+                                </div>      
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>
+                            </div>                            
+                            <!-- END WIDGET MESSAGES -->
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                            <!-- START WIDGET REGISTRED -->
+                            <div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
+                                <div class="widget-item-left">
+                                    <span class="fa fa-user"></span>
+                                </div>
+                                <div class="widget-data">
+                                    <div class="widget-int num-count">375</div>
+                                    <div class="widget-title">Registred users</div>
+                                    <div class="widget-subtitle">On your website</div>
+                                </div>
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                            
+                            </div>                            
+                            <!-- END WIDGET REGISTRED -->
+                            
+                        </div>
+                        <div class="col-md-3">
+                            
+                            <!-- START WIDGET CLOCK -->
+                            <div class="widget widget-info widget-padding-sm">
+                                <div class="widget-big-int plugin-clock">00:00</div>                            
+                                <div class="widget-subtitle plugin-date">Loading...</div>
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="left" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                            
+                                <div class="widget-buttons widget-c3">
+                                    <div class="col">
+                                        <a href="#"><span class="fa fa-clock-o"></span></a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><span class="fa fa-bell"></span></a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"><span class="fa fa-calendar"></span></a>
+                                    </div>
+                                </div>                            
+                            </div>                        
+                            <!-- END WIDGET CLOCK -->
+                            
+                        </div>
+                    </div>
+                    <!-- END WIDGETS -->                    
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            
+                            <!-- START USERS ACTIVITY BLOCK -->
 
-		isSetSearchWordColor = 1;
-		keywords = keywords.split(" ");
+                            <!-- END USERS ACTIVITY BLOCK -->
+                            
+                        </div>
+                        <div class="col-md-4">
+                            
+                            <!-- START VISITORS BLOCK -->
+                            
+                            <!-- END VISITORS BLOCK -->
+                            
+                        </div>
 
-		$("#main").bind(
-				"load.search",
-				function() {
-					$("#main").unbind("load.search");
-					var main = this.contentWindow.document;
-					$("td span", main).each(
-							function() {
-								var o = $(this);
-								$.each(keywords, function(i, n) {
-									var html = o.html();
-									html = html.replace(n,
-											"<font color='#c60a00'>" + n
-													+ "</font>");
-									o.html(html);
-								});
-							});
-					isSetSearchWordColor = 0;
-				});
-	}
-
-	$(function() {
-		initMenu();
-		shortcut.getShortcut();
-	});
-
-	window.topMenu = {};//保存每个tip对于的菜单导航id
-	window.currentMenu;//保存当前菜单对应的导航id
-
-	function getMenu(id, obj) {
-		$("#nav li").removeClass("on");
-		$(obj).addClass("on");
-		changeMenu(id);
-		currentMenu = id;
-		$("#main").attr("src", $("#" + id + " .on").attr("href"));
-	}
-
-	function changeMenu(id) {
-		$("#menu").html($("#" + id).html());
-		$("#menu a").click(function() {
-			$("#menu a").removeClass("on");
-			$(this).addClass("on")
-		});
-	}
-	function initMenu(url) {
-		var url = url || "index.do";
-		$("#menulist").find('a').each(function(i) {
-			if (url.indexOf($(this).attr('href')) >= 0) {
-				var menuId = $(this).parent().parent().parent().attr("id");
-				$("#nav li").removeClass("on");
-				$("#" + menuId + "menu").addClass("on");
-				$("#" + menuId + " a").removeClass("on");
-				$(this).addClass("on");
-				changeMenu(menuId);
-			}
-		})
-	}
-	//var topMenu=['首页','全局','用户管理','内容管理','模板/插件','数据库管理','百科联盟','模块','站内统计','Map'];
-	var shortcut = {
-		displayShortcut : function(type) {
-			if (type == 'display') {
-				$("#shortcut").css("display", 'block');
-			} else {
-				$("#shortcut").css("display", 'none');
-			}
-		},
-		getShortcut : function() {
-			var shortstr = "";
-			var html = '';
-			$('#menubox input').each(function(i) {
-				if (shortstr.indexOf($(this).val()) >= 0) {
-					$(this).attr('checked', 'checked');
-				}
-			})
-		},
-		clearShortcut : function() {
-			$("input[name='menu[]']").attr('checked', '');
-		},
-		setShortcut : function() {
-			var html = '';
-			var link = '';
-			var shortcutstate = $("input[name='shortcutstate']:checked").length;
-			if ($("input[name='menu[]']:checked").length > 5) {
-				alert("最多设置5个快捷功能");
-				return false;
-			}
-			$("input[name='menu[]']:checked").each(
-					function(i) {
-						html += "<li><a href=\"" + $(this).val()
-								+ "\" target=\"main\">" + $(this).attr('title')
-								+ "</a></li>";
-						link += $(this).val() + ',' + $(this).attr('title')
-								+ ';';
-					});
-			$.ajax({
-				url : "index.php?admin_setting-shortcut",
-				data : {
-					link : link,
-					shortcutstate : shortcutstate
-				},
-				cache : false,
-				dataType : "xml",
-				type : "post",
-				async : false,
-				success : function(xml) {
-					var message = xml.lastChild.firstChild.nodeValue;
-					if (message == '1') {
-						$("#shortcutmenu").html(html);
-						shortcut.displayShortcut('none');
-					} else {
-						alert('快捷方式保存未成功');
-					}
-				}
-			});
-		},
-		hideShortcut : function() {
-			dispaly = 'none';
-			$("#shortcutimg").attr('src', 'images/menu-box_b2.gif');
-			if ($("#shortcutmenu").css('display') == 'none') {
-				dispaly = 'block';
-				$("#shortcutimg").attr('src', 'images//menu-box_b.gif');
-			}
-			$("#shortcutmenu").css('display', dispaly);
-		}
-	}
-
-	function onsearch() {
-
-	}
-
-	$(document)
-			.ready(
-					function() {
-						$("form[name=search]")
-								.submit(
-										function() {
-											var input = $(this).find(':text'), keywords = $
-													.trim(input.val());
-
-											if (!keywords) {
-												alert("请输入要搜索的菜单名称关键字，如 缓存设置 等。");
-												input.focus();
-												return false;
-											} else if (/[`~!@#$%^&*<>'"\/\\]/i
-													.test(keywords)) {
-												alert("菜单名关键字不要包含特殊字符，如~!@#$%^&*<>'\"\\\/等。");
-												input.focus();
-												return false;
-											}
-
-										});
-						//点击左边导航在底部添加tab
-						leftliclick = function(obj) {
-							$("#iframecollection").children("iframe").css(
-									"display", "none");
-							$("#iframecollection").children("#" + obj.target)
-									.css("display", "block");
-							if ($("#navigationcontainer").children("div").is(
-									"." + obj.target)) {
-								$("#navigationcontainer").children("div").css({
-									"background" : "#2379BF",
-									"color" : "#fff"
-								});
-								$("#navigationcontainer").children(
-										"div." + obj.target).css({
-									"background" : "#fff",
-									"color" : "#2379BF"
-								});
-							} else {
-								$("#clonenavigation")
-										.children(".navigationtip").clone()
-										.appendTo("#navigationcontainer");
-								$("#navigationcontainer").children("div:last")
-										.addClass(obj.target).show();
-								$("#navigationcontainer").children("div:last")
-										.children("span").text($(obj).text());
-								if ($("#navigationcontainer").width() < $(
-										"#navigationcontainer").children("div").length * 100) {
-									$("#navigationcontainer").children(
-											".navigationtip:first").remove();
-								}
-								$("#navigationcontainer").children("div").css({
-									"background" : "#2379BF",
-									"color" : "#fff"
-								});
-								$("#navigationcontainer").children("div:last")
-										.css({
-											"background" : "#fff",
-											"color" : "#2379BF"
-										});
-							}
-							topMenu[obj.target] = currentMenu;
-						}
-
-						//删除tip
-						removetip = function(obj, e) {
-							$(obj).parent().remove();
-							stopBubble(e);
-						}
-
-						//显示tip
-						showtip = function(obj) {
-							var tipclass = $(obj).attr("class").replace(
-									"navigationtip ", "");
-							$("#iframecollection").children("iframe").css(
-									"display", "none");
-							$("#iframecollection").children("#" + tipclass)
-									.show();
-							$("#navigationcontainer").children("div").css({
-								"background" : "#2379BF",
-								"color" : "#fff"
-							});
-							$("#navigationcontainer").children("." + tipclass)
-									.css({
-										"background" : "#fff",
-										"color" : "#2379BF"
-									});
-							$("#" + topMenu[tipclass] + "menu").click();
-						}
-
-						//阻止事件冒泡函数
-						function stopBubble(e) {
-							if (e && e.stopPropagation)
-								e.stopPropagation()
-							else
-								window.event.cancelBubble = true
-						}
-
-					});
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    //提示不出现在当前iframe页面，而是出现在主页面(iframe之外)右下角
-    /* function showTopTip(){
-        try{
-	        window.top.$.omMessageTip.show({
-	            title : '提示',
-	            content : 'iframe中的消息弹出到iframe外的主页面中！'
-	        });
-        }catch(e){
-            alert('提示失败！原因是：顶层页面没有引入提示所需要的js。');
-        }
-    } */
-
-	
-	
-</script>
-</head>
-<body scrolling="no">
-	<table width="100%" height="100%" style="min-width: 1150px;">
-		<tr>
-			<td colspan="2" height="76px">
-				<div class="head">
-					<p class="r a-r t-tips">
-	
-						<c:out value="${user.sysUserName}" />
-						，你好！&nbsp;<a href="system/toChangePwd.do" onclick="leftliclick(this)" target="main0" class="red">修改密码</a>[<a href="logout.do">退出管理中心</a>]
-					</p>
-
-					<!-- 
-				|<a href="http://www.fuzhifu.com.cn" target="_blank">好货到家</a>
-				|<a href="http://t.cn/zTTQgcx" target="_blank">公司邮箱</a>
-				|<a href="http://t.cn/zH6Cigc" target="_blank">知识库</a> -->
-
-					<ul id="nav">
-						<c:set var="subMenu" value="" scope="page" />
-
-						<c:forEach items="${currentUserAllowPages}" var="currentUserAllowPage">
-							<c:if test="${currentUserAllowPage.resourceLevel== 1}">
-								<li onclick="getMenu('ac<c:out value="${currentUserAllowPage.authorizeCode }" />',this)" id="ac<c:out value="${currentUserAllowPage.authorizeCode }"/>menu"><a href="javascript:void(0);"><span><c:out value="${currentUserAllowPage.remark }" /></span></a>|</li>
-								<!-- 生成子菜单的div -->
-								<c:set var="subMenu" value="${subMenu }<div id='ac${currentUserAllowPage.authorizeCode }'><ul>" scope="page" />
-								<c:forEach items="${currentUserAllowPages}" var="iteratorPageForSubMenu">
-
-									<c:if test="${iteratorPageForSubMenu.resourceLevel== 2 && iteratorPageForSubMenu.superAuthorizeCode ==currentUserAllowPage.authorizeCode}">
-
-										<c:set var="subMenu" value="${subMenu }<li><a href='${contextPath }${iteratorPageForSubMenu.resource}' target='main${iteratorPageForSubMenu.authorizeCode}'  onclick='leftliclick(this)'" scope="page" />
-										<c:if test="${iteratorPageForSubMenu.resource== currentUserAllowPage.resource} ">
-											<c:set var="subMenu" value="${subMenu } class='on' " scope="page" />
-										</c:if>
-										<c:set var="subMenu" value="${subMenu }>${iteratorPageForSubMenu.remark }</a></li>" scope="page" />
-									</c:if>
-
-
-								</c:forEach>
-								<c:set var="subMenu" value="${subMenu }</ul></div>" scope="page" />
-
-							</c:if>
-						</c:forEach>
-					</ul>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td valign="top">
-				<div class="left">
-					<a href="index.do" class="logo" style="line-height: 100px; font-size: 16px;">好货到家运营管理平台</a>
-
-					<div class="sidebar">
-						<div class="menu-box">
-							<!--
-						<h2><span class="r m-r8"><span onclick="shortcut.displayShortcut('display');">设置</span></span>自定义菜单</h2> -->
-
-							<ul id='shortcutmenu'></ul>
-							<!-- 	<p class="menu-box_b"><span onclick="shortcut.hideShortcut()"><img src="images/menu-box_b.gif" id='shortcutimg'/></span></p>-->
+						<div class="col-md-4">
+                            
+                            <!-- START PROJECTS BLOCK -->
+                            
+                            <!-- END PROJECTS BLOCK -->
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+						<div class="col-md-8">
+                            
+                            <!-- START SALES BLOCK -->
+                            
+                            <!-- END SALES BLOCK -->
+                            
+                        </div>
+						<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
+							<div class="modal-content">
+								<ul class="list-inline item-details">
+									<li><a href="http://themifycloud.com/downloads/janux-premium-responsive-bootstrap-admin-dashboard-template/">Admin templates</a></li>
+									<li><a href="http://themescloud.org">Bootstrap themes</a></li>
+								</ul>
+							</div>
 						</div>
-						<div id='menu'></div>
-					</div>
-
-					<div style="display: none" id='menulist'>
-						<c:out value="${subMenu }" escapeXml="false" />
-						<!-- 
-					<div id='user'>
-						<ul>
-						<li><a href="index.php?admin_setting-baseregister" target="main" >注册设置</a></li>
-						<li><a href="index.php?admin_user" target="main"  class="on">管理用户</a></li>
-						<li><a href="index.php?admin_regular-groupset" target="main">管理权限</a></li>
-						<li><a href="index.php?admin_usergroup" target="main">管理用户组</a></li>
-						</ul>
-					</div>
-				 -->
-					</div>
-				</div>
-
-			</td>
-			<td height="85%" valign="top" id="iframecollection">
-				<iframe name="main" id="main" marginheight="0" marginwidth="0" frameborder="0" scrolling="yes" style="width: 100%; height: 95%; overflow: visible;" src="workstation.do"> </iframe>
-				<iframe name="main0" id="main0" marginheight="0" marginwidth="0" frameborder="0" scrolling="yes" style="width: 100%; height: 95%;"> </iframe>
-				<c:forEach items="${currentUserAllowPages}" var="currentUserAllowPage">
-					<c:if test="${currentUserAllowPage.resourceLevel== 1}">
-						<c:forEach items="${currentUserAllowPages}" var="iteratorPageForSubMenu">
-							<c:if test="${iteratorPageForSubMenu.resourceLevel== 2 && iteratorPageForSubMenu.superAuthorizeCode ==currentUserAllowPage.authorizeCode}">
-								<iframe name="main${iteratorPageForSubMenu.authorizeCode}" id="main${iteratorPageForSubMenu.authorizeCode}" marginheight="0" marginwidth="0" frameborder="0" scrolling="yes" style="width: 100%; height: 95%; overflow: visible; display: none;"></iframe>
-							</c:if>
-						</c:forEach>
-					</c:if>
-				</c:forEach>
-			</td>
-		</tr>
-	</table>
+                        
+                        <div class="col-md-4">
+                            
+                            <!-- START SALES & EVENTS BLOCK -->
+                           
+                            <!-- END SALES & EVENTS BLOCK -->
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- START DASHBOARD CHART -->
+					<div class="chart-holder" id="dashboard-area-1" style="height: 200px;"></div>
+					<div class="block-full-width">
+                                                                       
+                    </div>                    
+                    <!-- END DASHBOARD CHART -->
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
 
 
-	<div id="navigationtab">
-		<div id="navigationcontainer">
-			<div class="navigationtip main" onclick="showtip(this);" style="display: block; color: #2379BF; background: #fff;">
-				<span>首页</span>
-			</div>
-		</div>
-	</div>
+		<!-- 退出登录 弹出的消息栏 -->
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
 
-	<id id="clonenavigation">
-	<div class="navigationtip" onclick="showtip(this);">
-		<div class="closebutton" onclick="removetip(this,event);">+</div>
-		<span></span>
-	</div>
-	</id>
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="${ctx}/joli-admin/audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="${ctx}/joli-admin/audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->                  
+        
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
 
+        <!-- START THIS PAGE PLUGINS-->        
+        <script type='text/javascript' src='${ctx}/joli-admin/js/plugins/icheck/icheck.min.js'></script>        
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+        
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/morris/raphael-min.js"></script>
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/morris/morris.min.js"></script>       
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/rickshaw/d3.v3.js"></script>
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/rickshaw/rickshaw.min.js"></script>
+        <script type='text/javascript' src='${ctx}/joli-admin/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
+        <script type='text/javascript' src='${ctx}/joli-admin/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>                
+        <script type='text/javascript' src='${ctx}/joli-admin/js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/owl/owl.carousel.min.js"></script>                 
+        
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/moment.min.js"></script>
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- END THIS PAGE PLUGINS-->        
 
-
-	<div class="tc_bg  tc_map" id="mapbox" style="display: none">
-		<div class="tc">
-			<h2>
-				<a href="javascript:void(0);" class="close" onclick="$('#mapbox').css('display','none')"></a>管理中心导航
-			</h2>
-			<ul class="col-ul" id="maplist">
-			</ul>
-		</div>
-	</div>
-	<p class="copy">好货到家 V1.0</p>
-	<script type="text/javascript">
-		function loadScript(url, callback) {
-			var script = document.createElement("script");
-			script.type = "text/javascript";
-			script.onload = script.onreadystatechange = function() {
-				if (!this.readyState || this.readyState == 'loaded'
-						|| this.readyState == 'complete') {
-					callback();
-				}
-			}
-			script.src = url;
-			document.body.appendChild(script);
-		}
-	</script>
-
-</body>
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="${ctx}/joli-admin/js/settings.js"></script>
+        
+        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins.js"></script>        
+        <script type="text/javascript" src="${ctx}/joli-admin/js/actions.js"></script>
+        
+        <script type="text/javascript" src="${ctx}/joli-admin/js/demo_dashboard.js"></script>
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->         
+    </body>
 </html>

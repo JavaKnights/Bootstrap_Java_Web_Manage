@@ -1,7 +1,6 @@
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="${ctx}/resources/bootstrap-3.3.4-dist/css/bootstrap.css">
-<!-- Custom styles for this template -->
-<link rel="stylesheet" href="${ctx}/css/signin.css">
+
 <!-- 浏览器标签图标 -->
 <link rel="icon" href="${ctx}/img/favicon.ico" type="image/x-icon" />
 
