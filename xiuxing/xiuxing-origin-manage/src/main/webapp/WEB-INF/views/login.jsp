@@ -2,14 +2,8 @@
 <%@ include file="/WEB-INF/views/commons/taglibs.jsp"%>
 <!DOCTYPE html><html lang="zh-CN" class="body-full-height">
   <head>
-  	<!-- META SECTION -->
-    <title>Joli Admin - Responsive Bootstrap Admin Template</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <!-- END META SECTION -->
-    
+  	
+    <%@ include file="/WEB-INF/views/commons/top.jsp"%>
 	<%@ include file="/WEB-INF/views/commons/commonsjs.jsp"%>
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
