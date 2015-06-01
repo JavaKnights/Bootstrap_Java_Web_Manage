@@ -21,6 +21,33 @@
     </bean>
 	<context:property-placeholder />
 	
+	<!-- Kaptcha验证码验证 -->
+	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">  
+        <property name="config">  
+            <bean class="com.google.code.kaptcha.util.Config">  
+                <constructor-arg>  
+                    <props>  
+                        <prop key="kaptcha.border">${kaptcha.border}</prop>  
+                        <prop key="kaptcha.border.color">${kaptcha.border.color}</prop>  
+                        <prop key="kaptcha.border.thickness">${kaptcha.border.thickness}</prop>
+                        <prop key="kaptcha.textproducer.char.string">${kaptcha.textproducer.char.string}</prop>
+                        <prop key="kaptcha.textproducer.char.length">${kaptcha.textproducer.char.length}</prop>
+                        <prop key="kaptcha.textproducer.font.names">${kaptcha.textproducer.font.names}</prop>
+                        <prop key="kaptcha.textproducer.font.size">${kaptcha.textproducer.font.size}</prop>  
+                        <prop key="kaptcha.textproducer.font.color">${kaptcha.textproducer.font.color}</prop>  
+                        <prop key="kaptcha.textproducer.char.space">${kaptcha.textproducer.char.space}</prop>  
+                        <prop key="kaptcha.noise.color">${kaptcha.noise.color}</prop>
+	                    <prop key="kaptcha.background.clear.from">${kaptcha.background.clear.from}</prop>   
+                    	<prop key="kaptcha.background.clear.to">${kaptcha.background.clear.to}</prop> 
+                    	<prop key="kaptcha.image.width">${kaptcha.image.width}</prop>  
+                        <prop key="kaptcha.image.height">${kaptcha.image.height}</prop>
+                        <prop key="kaptcha.session.key">code</prop>
+                    </props>  
+                </constructor-arg>  
+            </bean>  
+        </property>  
+    </bean>  
+	
 	<!-- 定义aspectj -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 	<context:component-scan base-package="com.xiuxinger.origin" />

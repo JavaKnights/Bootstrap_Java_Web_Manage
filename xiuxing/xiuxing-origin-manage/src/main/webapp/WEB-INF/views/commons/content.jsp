@@ -1,4 +1,19 @@
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ include file="/WEB-INF/views/commons/taglibs.jsp"%>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<%@ include file="/WEB-INF/views/commons/top.jsp"%>
+<%@ include file="/WEB-INF/views/commons/commonsjs.jsp"%>
+<script type="text/javascript">
+	/* function setmain(title,href){
+		
+		$('.contentFrame').attr('src','href');
+		return false;		
+	} */
+</script>
+</head>
+<body><%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!-- 中部页面部分 -->
 <!-- PAGE CONTENT WRAPPER -->
 <div class="page-content-wrap">
@@ -176,4 +191,5 @@
 	<!-- END DASHBOARD CHART -->
 
 </div>
-<!-- END PAGE CONTENT WRAPPER -->
+<!-- END PAGE CONTENT WRAPPER --></body>
+</html>

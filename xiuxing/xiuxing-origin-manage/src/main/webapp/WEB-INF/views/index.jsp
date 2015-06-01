@@ -5,7 +5,10 @@
     <head>        
 		<%@ include file="/WEB-INF/views/commons/top.jsp"%>
         <%@ include file="/WEB-INF/views/commons/commonsjs.jsp"%> 
-                                      
+		<script type="text/javascript">
+
+		     
+		</script>                            
     </head>
     <body>
         <!-- START PAGE CONTAINER -->
@@ -35,8 +38,9 @@
                 
                 <!-- 中部页面部分 -->
                 <!-- PAGE CONTENT WRAPPER -->
-                <%@ include file="/WEB-INF/views/commons/content.jsp"%>
-                    
+                <iframe name="contentFrame" src="defaultContent.do" style="border: none; display: block; height: 100%; width: 100%; overflow-y: scroll;" frameborder="0" seamless="seamless"></iframe>     
+				<!-- END PAGE CONTENT WRAPPER -->
+	    
             </div>        
             <!-- END PAGE CONTENT -->
         </div>
@@ -71,7 +75,7 @@
         
     <!-- START SCRIPTS -->
         <!-- START PLUGINS -->
-        <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/jquery/jquery.min.js"></script>
+        
         <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/bootstrap/bootstrap.min.js"></script>        
         <!-- END PLUGINS -->
@@ -93,6 +97,9 @@
         <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/moment.min.js"></script>
         <script type="text/javascript" src="${ctx}/joli-admin/js/plugins/daterangepicker/daterangepicker.js"></script>
         <!-- END THIS PAGE PLUGINS-->        
+        
+        <!-- 自定义JS -->
+        <script type="text/javascript" src="${ctx}/resources/project_path.js"></script>
 
         <!-- START TEMPLATE 
         <script type="text/javascript" src="${ctx}/joli-admin/js/settings.js"></script>-->

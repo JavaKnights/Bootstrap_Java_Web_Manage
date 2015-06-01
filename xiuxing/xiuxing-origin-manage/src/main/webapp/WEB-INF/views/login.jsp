@@ -2,14 +2,8 @@
 <%@ include file="/WEB-INF/views/commons/taglibs.jsp"%>
 <!DOCTYPE html><html lang="zh-CN" class="body-full-height">
   <head>
-  	<!-- META SECTION -->
-    <title>Joli Admin - Responsive Bootstrap Admin Template</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <!-- END META SECTION -->
-    
+  	
+    <%@ include file="/WEB-INF/views/commons/top.jsp"%>
 	<%@ include file="/WEB-INF/views/commons/commonsjs.jsp"%>
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -19,7 +13,13 @@
     <![endif]-->
     
     <script type="text/javascript">
-    	
+	    $(function(){         
+	        $('#kaptchaImage').click(function () {
+	        	//生成验证码  
+	         	$(this).hide().attr('src', 'kaptcha/getKaptchaImage.do?' + Math.floor(Math.random()*100) ).fadeIn();  
+	         	event.cancelBubble=true;  
+	        });  
+	    });
     	
     </script>
   </head>
@@ -35,12 +35,20 @@
                     <form action="doLogin.do" class="form-horizontal" method="post">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control" placeholder="用户名"/>
+                            <input name="sysUserName" type="text" class="form-control" placeholder="用户名"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="password" class="form-control" placeholder="密码"/>
+                            <input name="sysPassword" type="password" class="form-control" placeholder="密码"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12" style="width:50%;">
+                            <input name="verifyCode" type="password" class="form-control" placeholder="验证码"/>
+                        </div>
+                         <div class="col-md-12" style="width:50%;">
+                            <img id="kaptchaImage" src="kaptcha/getKaptchaImage.do"  />
                         </div>
                     </div>
                     <div class="form-group">
@@ -72,7 +80,7 @@
                 </div>
                 <div class="login-footer">
                     <div class="pull-left">
-                        &copy; 2015 枫帝科技
+                        &copy; 2015 
                     </div>
                     <div class="pull-right">
                         <a href="#">关于</a> |

@@ -10,13 +10,15 @@ package com.xiuxinger.origin.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.google.code.kaptcha.Constants;
 import com.xiuxinger.origin.entity.SysUser;
 import com.xiuxinger.origin.rpc.ISysUserRpcService;
 
@@ -114,6 +116,16 @@ public class SysUserControlller {
     public String login(HttpServletRequest request, Model model, SysUser sysUser){
     
         try {
+            //获取HttpSession中的验证码  
+            String verifyCode = (String)request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);  
+            //获取用户请求表单中输入的验证码  
+            String submitCode = WebUtils.getCleanParam(request, "verifyCode");
+            
+            System.out.println("用户[" + sysUser.getSysUserName() + "]登录时输入的验证码为[" + submitCode + "],HttpSession中的验证码为[" + verifyCode + "]");  
+            if (StringUtils.isEmpty(submitCode) || !StringUtils.equals(verifyCode, submitCode.toLowerCase())){  
+                request.setAttribute("message_login", "验证码不正确");  
+                return "error";  
+            }  
             
             SysUser user = sysUserRpcService.login(sysUser);
             
@@ -158,9 +170,10 @@ public class SysUserControlller {
         log.info("-------------index，跳转到首页-----------");
         return INDEX;
     }
-    @RequestMapping("/workstation.do") 
+    
+    @RequestMapping("/defaultContent.do") 
     public String workstation(){
-        return WORKSTATION;
+        return "commons/content";
     }
 
 }
