@@ -1,12 +1,27 @@
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<!-- ä¸­éƒ¨é¡µé¢éƒ¨åˆ† -->
+<%@ include file="/WEB-INF/views/commons/taglibs.jsp"%>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<%@ include file="/WEB-INF/views/commons/top.jsp"%>
+<%@ include file="/WEB-INF/views/commons/commonsjs.jsp"%>
+<script type="text/javascript">
+	/* function setmain(title,href){
+		
+		$('.contentFrame').attr('src','href');
+		return false;		
+	} */
+</script>
+</head>
+<body><%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!-- ÖĞ²¿Ò³Ãæ²¿·Ö -->
 <!-- PAGE CONTENT WRAPPER -->
 <div class="page-content-wrap">
-	<!-- é¥°å“æ  -->
+	<!-- ÊÎÆ·À¸ -->
 	<!-- START WIDGETS -->
 	<div class="row">
 		<div class="col-md-3">
-			<!-- æ—¶é’Ÿé¥°å“ -->
+			<!-- Ê±ÖÓÊÎÆ· -->
 			<!-- START WIDGET CLOCK -->
 			<div class="widget widget-info widget-padding-sm">
 				<div class="widget-big-int plugin-clock">00:00</div>
@@ -39,7 +54,7 @@
 		</div>
 	
 		<div class="col-md-3">
-			<!-- ç³»ç»Ÿæ¸¸å®¢ç»Ÿè®¡ -->
+			<!-- ÏµÍ³ÓÎ¿ÍÍ³¼Æ -->
 			<!-- START WIDGET SLIDER -->
 			<div class="widget widget-default widget-carousel">
 				<div class="owl-carousel" id="owl-example">
@@ -69,7 +84,7 @@
 
 		</div>
 		<div class="col-md-3">
-			<!-- é‚®ä»¶æé†’é¥°å“ -->
+			<!-- ÓÊ¼şÌáĞÑÊÎÆ· -->
 			<!-- START WIDGET MESSAGES -->
 			<div class="widget widget-default widget-item-icon" onclick="location.href='pages-messages.html';">
 				<div class="widget-item-left">
@@ -90,7 +105,7 @@
 
 		</div>
 		<div class="col-md-3">
-			<!-- ç³»ç»Ÿæ³¨å†Œæ€»äººæ•°ç»Ÿè®¡ -->
+			<!-- ÏµÍ³×¢²á×ÜÈËÊıÍ³¼Æ -->
 			<!-- START WIDGET REGISTRED -->
 			<div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
 				<div class="widget-item-left">
@@ -114,7 +129,7 @@
 	</div>
 	<!-- END WIDGETS -->
 
-	<!-- ä¸»è¦å†…å®¹å±•ç¤º æ¯”å¦‚æ•°æ®è¡¨æ ¼ï¼Œç»Ÿè®¡å›¾ç­‰, è¿™éƒ¨åˆ†åŠ¨æ€å¯å˜ -->
+	<!-- Ö÷ÒªÄÚÈİÕ¹Ê¾ ±ÈÈçÊı¾İ±í¸ñ£¬Í³¼ÆÍ¼µÈ, Õâ²¿·Ö¶¯Ì¬¿É±ä -->
 	<div class="row">
 		<div class="col-md-4">
 
@@ -176,4 +191,5 @@
 	<!-- END DASHBOARD CHART -->
 
 </div>
-<!-- END PAGE CONTENT WRAPPER -->
+<!-- END PAGE CONTENT WRAPPER --></body>
+</html>

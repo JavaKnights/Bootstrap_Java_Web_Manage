@@ -1,5 +1,6 @@
+
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<!-- é¡¶éƒ¨é¡µé¢ -->
+<!-- ¶¥²¿Ò³Ãæ -->
  <!-- START X-NAVIGATION VERTICAL -->
  <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
      <!-- TOGGLE NAVIGATION -->
@@ -10,7 +11,7 @@
      <!-- SEARCH -->
      <li class="xn-search">
          <form role="form">
-             <input type="text" name="search" placeholder="æœç´¢..."/>
+             <input type="text" name="search" placeholder="ËÑË÷..."/>
          </form>
      </li>   
      <!-- END SEARCH -->

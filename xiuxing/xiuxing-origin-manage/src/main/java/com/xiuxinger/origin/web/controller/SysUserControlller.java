@@ -158,9 +158,10 @@ public class SysUserControlller {
         log.info("-------------index，跳转到首页-----------");
         return INDEX;
     }
-    @RequestMapping("/workstation.do") 
+    
+    @RequestMapping("/defaultContent.do") 
     public String workstation(){
-        return WORKSTATION;
+        return "commons/content";
     }
 
 }
