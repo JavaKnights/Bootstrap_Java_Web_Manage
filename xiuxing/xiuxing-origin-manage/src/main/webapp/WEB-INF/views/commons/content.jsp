@@ -17,11 +17,11 @@
 <!-- 中部页面部分 -->
 <!-- PAGE CONTENT WRAPPER -->
 <div class="page-content-wrap">
-	<!-- 饰品栏 -->
+	<!-- ��Ʒ�� -->
 	<!-- START WIDGETS -->
 	<div class="row">
 		<div class="col-md-3">
-			<!-- 时钟饰品 -->
+			<!-- ʱ����Ʒ -->
 			<!-- START WIDGET CLOCK -->
 			<div class="widget widget-info widget-padding-sm">
 				<div class="widget-big-int plugin-clock">00:00</div>
@@ -54,7 +54,7 @@
 		</div>
 	
 		<div class="col-md-3">
-			<!-- 系统游客统计 -->
+			<!-- ϵͳ�ο�ͳ�� -->
 			<!-- START WIDGET SLIDER -->
 			<div class="widget widget-default widget-carousel">
 				<div class="owl-carousel" id="owl-example">
@@ -84,7 +84,7 @@
 
 		</div>
 		<div class="col-md-3">
-			<!-- 邮件提醒饰品 -->
+			<!-- �ʼ�������Ʒ -->
 			<!-- START WIDGET MESSAGES -->
 			<div class="widget widget-default widget-item-icon" onclick="location.href='pages-messages.html';">
 				<div class="widget-item-left">
@@ -105,7 +105,7 @@
 
 		</div>
 		<div class="col-md-3">
-			<!-- 系统注册总人数统计 -->
+			<!-- ϵͳע��������ͳ�� -->
 			<!-- START WIDGET REGISTRED -->
 			<div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
 				<div class="widget-item-left">
@@ -129,7 +129,7 @@
 	</div>
 	<!-- END WIDGETS -->
 
-	<!-- 主要内容展示 比如数据表格，统计图等, 这部分动态可变 -->
+	<!-- ��Ҫ����չʾ ������ݱ��ͳ��ͼ��, �ⲿ�ֶ�̬�ɱ� -->
 	<div class="row">
 		<div class="col-md-4">
 

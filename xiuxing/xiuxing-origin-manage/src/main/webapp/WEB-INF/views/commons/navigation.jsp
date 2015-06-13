@@ -1,6 +1,7 @@
-
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
 <!-- 顶部页面 -->
+
  <!-- START X-NAVIGATION VERTICAL -->
  <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
      <!-- TOGGLE NAVIGATION -->
@@ -11,7 +12,7 @@
      <!-- SEARCH -->
      <li class="xn-search">
          <form role="form">
-             <input type="text" name="search" placeholder="搜索..."/>
+             <input type="text" name="search" placeholder="����..."/>
          </form>
      </li>   
      <!-- END SEARCH -->
